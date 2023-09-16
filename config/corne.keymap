@@ -23,6 +23,7 @@
             bindings = <&kp LS(N7)>, <&kp LS(RBRC)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         isqudq: is_quot_dquo {
             compatible = "zmk,behavior-mod-morph";
             label = "IS_QUOT_DQUO";
@@ -30,6 +31,17 @@
             bindings = <&kp RBRC>, <&kp LS(N2)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
     };
 
         keymap {
@@ -43,7 +55,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &isslqu   &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &isqudq &trans
-   &isqudq   &mt LGUI A &mt LALT R &mt LCTRL S &mt LSHFT T     &kp G         &kp M    &mt RSHFT N  &mt RCTRL E    &mt LALT I   &mt LGUI O  &trans
+   &isqudq   &mt LGUI A &mt LALT R &mt LCTRL S &hm LSHFT T     &kp G         &kp M    &mt RSHFT N  &mt RCTRL E    &mt LALT I   &mt LGUI O  &trans
    &trans    &kp Z      &mt RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &mt RALT COMMA &kp DOT      &isslqu     &trans
                        &trans     &kp ESC     &lt LOWER SPACE &lt RAISE RET &kp BSPC &trans
                         >;
