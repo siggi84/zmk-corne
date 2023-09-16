@@ -15,7 +15,6 @@
 #define IS_QUOT RBRC
 
 / {
-{
     behaviors {
         gresc: grave_escape {
             compatible = "zmk,behavior-mod-morph";
