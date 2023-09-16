@@ -15,6 +15,16 @@
 #define IS_QUOT RBRC
 
 / {
+    behaviors {
+        gresc: grave_escape {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_ESCAPE";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp GRAVE>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
+    };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -27,7 +37,7 @@
                         bindings = <
    &trans   &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &kp IS_QUOT &trans
    &trans   &mt LGUI A &mt LALT R &mt LCTRL S &mt LSHFT T     &kp G         &kp M    &mt RSHFT N  &mt RCTRL E    &mt LALT I   &mt LGUI O  &trans
-   &trans   &kp Z      &mt RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &mt RALT COMMA &kp DOT      &kp FSLH    &trans
+   &trans   &kp Z      &mt RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &mt RALT COMMA &kp DOT      &kp SLSH    &trans
                        &trans     &kp ESC     &lt LOWER SPACE &lt RAISE RET &kp BSPC &trans
                         >;
                 };
