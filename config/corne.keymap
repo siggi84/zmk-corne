@@ -35,7 +35,7 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &GRAVE_ESCAPE   &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &kp IS_QUOT &trans
+   &trans   &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &kp IS_QUOT &trans
    &kp LS(RBRC)   &mt LGUI A &mt LALT R &mt LCTRL S &mt LSHFT T     &kp G         &kp M    &mt RSHFT N  &mt RCTRL E    &mt LALT I   &mt LGUI O  &trans
    &kp LS(N7)   &kp Z      &mt RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &mt RALT COMMA &kp DOT      &kp N7      &kp RBRC
                        &trans     &kp ESC     &lt LOWER SPACE &lt RAISE RET &kp BSPC &trans
