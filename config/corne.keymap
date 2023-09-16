@@ -18,10 +18,17 @@
     behaviors {
         isslqu: is_slsh_ques {
             compatible = "zmk,behavior-mod-morph";
-            label = "GRAVE_ESCAPE";
+            label = "IS_SLASH_QUESTION";
             #binding-cells = <0>;
             bindings = <&kp LS(N7)>, <&kp LS(RBRC)>;
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        isqudq: is_quot_dquo {
+            compatible = "zmk,behavior-mod-morph";
+            label = "IS_QUOT_DQUO";
+            #binding-cells = <0>;
+            bindings = <&kp RBRC>, <&kp LS(N2)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -35,8 +42,8 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &isslqu   &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &kp IS_QUOT &trans
-   &trans    &mt LGUI A &mt LALT R &mt LCTRL S &mt LSHFT T     &kp G         &kp M    &mt RSHFT N  &mt RCTRL E    &mt LALT I   &mt LGUI O  &trans
+   &isslqu   &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &isqudq &trans
+   &isqudq   &mt LGUI A &mt LALT R &mt LCTRL S &mt LSHFT T     &kp G         &kp M    &mt RSHFT N  &mt RCTRL E    &mt LALT I   &mt LGUI O  &trans
    &trans    &kp Z      &mt RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &mt RALT COMMA &kp DOT      &isslqu     &trans
                        &trans     &kp ESC     &lt LOWER SPACE &lt RAISE RET &kp BSPC &trans
                         >;
