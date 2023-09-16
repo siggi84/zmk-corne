@@ -28,7 +28,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "IS_QUOT_DQUO";
             #binding-cells = <0>;
-            bindings = <&kp RBRC>, <&kp LS(N2)>;
+            bindings = <&kp RBRC>, <&kp LBKT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -54,9 +54,9 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &isslqu   &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &isqudq &trans
-   &kp RBRC  &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T     &kp G         &kp M    &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &trans
-   &trans    &kp Z      &hm RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
+   &trans   &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &isqudq &trans
+   &trans   &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T     &kp G         &kp M    &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &trans
+   &trans   &kp Z      &hm RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
                        &trans     &kp ESC     &lt LOWER SPACE &lt RAISE RET &kp BSPC &trans
                         >;
                 };
