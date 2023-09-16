@@ -24,7 +24,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
-   &kp LCTRL &kp A &kp R &kp S &mt LSHFT T &kp G   &kp M &mt RSHFT N  &kp E     &kp I   &kp O &kp SQT
+   &kp LCTRL &mt LGUI A &mt LALT R &mt LCTRL S &mt LSHFT T &kp G   &kp M &mt RSHFT N  &mt RCTRL E     &mt LALT I   &mt LGUI O &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp ESC
                   &kp LGUI &kp ESC &lt LOWER SPACE   &lt RAISE RET &kp BSPC &kp RALT
                         >;
