@@ -16,7 +16,7 @@
 
 / {
     behaviors {
-        mygresc: my_grave_escape {
+        isslqu: is_slsh_ques {
             compatible = "zmk,behavior-mod-morph";
             label = "GRAVE_ESCAPE";
             #binding-cells = <0>;
@@ -35,9 +35,9 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &mygresc   &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &kp IS_QUOT &trans
-   &kp LS(RBRC)   &mt LGUI A &mt LALT R &mt LCTRL S &mt LSHFT T     &kp G         &kp M    &mt RSHFT N  &mt RCTRL E    &mt LALT I   &mt LGUI O  &trans
-   &kp LS(N7)   &kp Z      &mt RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &mt RALT COMMA &kp DOT      &kp N7      &kp RBRC
+   &isslqu   &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &kp IS_QUOT &trans
+   &trans    &mt LGUI A &mt LALT R &mt LCTRL S &mt LSHFT T     &kp G         &kp M    &mt RSHFT N  &mt RCTRL E    &mt LALT I   &mt LGUI O  &trans
+   &trans    &kp Z      &mt RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &mt RALT COMMA &kp DOT      &isslqu     &trans
                        &trans     &kp ESC     &lt LOWER SPACE &lt RAISE RET &kp BSPC &trans
                         >;
                 };
