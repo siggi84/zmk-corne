@@ -67,9 +67,9 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &acute_letter O   &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &isqudq &trans
-   &acute_letter U   &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T     &kp G         &kp M    &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &trans
-   &acute_letter A   &kp Z      &hm RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
+   &kp LBRC   &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &isqudq &trans
+   &kp RBRC   &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T     &kp G         &kp M    &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &trans
+   &trans     &kp Z      &hm RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
                        &trans     &lt ICE ESC     &lt LOWER SPACE &lt RAISE RET &lt FN BSPC &trans
                         >;
                 };
