@@ -92,6 +92,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 12>;
+            bindings = <&kp TAB>;
+        };
+    };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -102,7 +111,7 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &trans     &kp Q      &kp W      &kp F       &kp P           &kp B           &kp J         &kp L        &kp U          &kp Y        &isqudq     &trans
+   &TAB       &kp Q      &kp W      &kp F       &kp P           &kp B           &kp J         &kp L        &kp U          &kp Y        &isqudq     &DEL
    &trans     &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T     &kp G           &kp M         &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &trans
    &trans     &kp Z      &hm RALT X &kp C       &kp D           &kp V           &kp K         &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
                                     &trans      &lt ICE ESC     &lmb LOWER SPACE &lmb RAISE RET &lmr FN BSPC &trans
@@ -113,7 +122,7 @@
    &trans   &kp N1       &kp N2          &kp N3         &kp N4       &kp N5         &kp N6      &kp N7        &kp N8    &kp N9     &kp N0       &trans
    &trans   &kp RS(N1)   &kp RA(Q)       &kp RS(N3)     &kp RS(N4)   &kp RS(N5)     &kp LS(N7)  &kp LS(EQUAL) &kp EQUAL &kp LS(N8) &kp LS(N9)   &trans
    &trans   &trans       &kp RA(M)       &kp RA(GRAVE)  &kp RA(E)    &trans         &kp LS(N0)  &kp NUHS      &trans    &trans     &kp LS(NUHS) &trans
-                                    &trans     &trans       &trans      &trans  &trans   &trans
+                                         &trans     &trans       &trans      &trans  &trans   &trans
                         >;
                 };
 
