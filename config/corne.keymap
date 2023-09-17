@@ -45,6 +45,17 @@
 
     };
 
+    macros {
+        is_a: is_a {
+            label = "MY_IS_A";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp SQT &kp A >
+                ;
+        };
+    };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -57,30 +68,20 @@
                         bindings = <
    &trans   &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &isqudq &trans
    &trans   &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T     &kp G         &kp M    &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &trans
-   &trans   &kp Z      &hm RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
+   &is_a    &kp Z      &hm RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
                        &trans     &kp ESC     &lt LOWER SPACE &lt RAISE RET &lt FN BSPC &trans
                         >;
                 };
                 lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &bt BT_CLR   &kp N1       &kp N2          &kp N3       &kp N4       &kp N5         &kp N6      &kp N7        &kp N8    &kp N9     &kp N0       &bt BT_SEL 2
-   &bt BT_SEL 0 &kp RS(N1)   &kp RA(Q)       &kp RS(N3)   &kp RS(N4)   &kp RS(N5)     &kp LS(N7)  &kp LS(EQUAL) &kp EQUAL &kp LS(N8) &kp LS(N9)   &bt BT_SEL 3
-   &bt BT_SEL 1 &kp RA(M)    &kp RA(GRAVE)   &kp RA(M)    &trans       &trans         &kp LS(N0)  &kp NUHS      &trans    &trans     &kp LS(NUHS) &bt BT_SEL 4
+   &bt BT_CLR   &kp N1       &kp N2          &kp N3         &kp N4       &kp N5         &kp N6      &kp N7        &kp N8    &kp N9     &kp N0       &bt BT_SEL 2
+   &bt BT_SEL 0 &kp RS(N1)   &kp RA(Q)       &kp RS(N3)     &kp RS(N4)   &kp RS(N5)     &kp LS(N7)  &kp LS(EQUAL) &kp EQUAL &kp LS(N8) &kp LS(N9)   &bt BT_SEL 3
+   &bt BT_SEL 1 &trans       &kp RA(M)       &kp GRAVE      &kp RA(E)    &trans         &kp LS(N0)  &kp NUHS      &trans    &trans     &kp LS(NUHS) &bt BT_SEL 4
                                     &trans     &trans       &trans      &trans  &trans   &trans
                         >;
                 };
 
                 raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &trans  &kp RA(N0)   &kp LS(NUBS)    &kp RA(N9)     &kp LS(N9)      &kp RA(NUBS)       &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PLAY &trans
    &trans  &kp RA(N7)   &kp NUBS        &kp RA(N8)     &kp LS(N8)      &kp RA(MINUS)      &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT  &kp CAPS   &trans
