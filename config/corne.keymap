@@ -11,6 +11,7 @@
 #define DEFAULT 0
 #define LOWER   1
 #define RAISE   2
+#define FN      3
 
 #define IS_QUOT RBRC
 
@@ -57,7 +58,7 @@
    &trans   &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &isqudq &trans
    &trans   &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T     &kp G         &kp M    &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &trans
    &trans   &kp Z      &hm RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
-                       &trans     &kp ESC     &lt LOWER SPACE &lt RAISE RET &kp BSPC &trans
+                       &trans     &kp ESC     &lt LOWER SPACE &lt RAISE RET &lt FN BSPC &trans
                         >;
                 };
                 lower_layer {
@@ -80,6 +81,15 @@
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+   &trans  &kp RA(N0)   &kp LS(NUBS)    &kp RA(N9)     &kp LS(N9)      &kp RA(NUBS)       &trans    &trans    &trans          &trans    &trans   &trans
+   &trans  &kp RA(N7)   &kp NUBS        &kp RA(N8)     &kp LS(N8)      &kp RA(MINUS)      &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &kp CAPS &trans
+   &trans  &kp RA(NUHS) &kp LS(N9)      &trans         &kp RA(RBRC)    &trans             &kp HOME  &kp PG_DN &kp PG_UP       &kp END   &kp INS  &trans
+                             &trans  &trans   &trans   &trans   &trans    &trans
+                        >;
+                };
+
+                fn_layer {
                         bindings = <
    &trans  &kp RA(N0)   &kp LS(NUBS)    &kp RA(N9)     &kp LS(N9)      &kp RA(NUBS)       &trans    &trans    &trans          &trans    &trans   &trans
    &trans  &kp RA(N7)   &kp NUBS        &kp RA(N8)     &kp LS(N8)      &kp RA(MINUS)      &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &kp CAPS &trans
