@@ -103,8 +103,8 @@
                 ice_layer {
                         bindings = <
    &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp SLASH  &acute_letter U  &acute_letter Y  &kp MINUS       &trans
-   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp RBRC   &acute_letter E  &acute_letter I  &acute_letter O &trans
-   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &trans     &kp SEMI         &trans           &acute_letter A &trans
+   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp LBRC   &acute_letter E  &acute_letter I  &acute_letter O &trans
+   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &trans     &kp SEMI         &acute_letter A  &trans          &trans
                              &trans  &trans   &trans   &trans   &trans    &trans
                         >;
                 };
