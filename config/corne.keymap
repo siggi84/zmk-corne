@@ -82,9 +82,9 @@
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &trans  &kp RA(N0)   &kp LS(NUBS)    &kp RA(N9)     &kp LS(N9)      &kp RA(NUBS)       &trans    &trans    &trans          &trans    &trans   &trans
-   &trans  &kp RA(N7)   &kp NUBS        &kp RA(N8)     &kp LS(N8)      &kp RA(MINUS)      &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &kp CAPS &trans
-   &trans  &kp RA(NUHS) &kp LS(N9)      &trans         &kp RA(RBRC)    &trans             &kp HOME  &kp PG_DN &kp PG_UP       &kp END   &kp INS  &trans
+   &trans  &kp RA(N0)   &kp LS(NUBS)    &kp RA(N9)     &kp LS(N9)      &kp RA(NUBS)       &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PLAY &trans
+   &trans  &kp RA(N7)   &kp NUBS        &kp RA(N8)     &kp LS(N8)      &kp RA(MINUS)      &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT  &kp CAPS   &trans
+   &trans  &kp RA(NUHS) &kp LS(N9)      &trans         &kp RA(RBRC)    &trans             &kp HOME    &kp PG_DN    &kp PG_UP    &kp END    &kp INS    &trans
                              &trans  &trans   &trans   &trans   &trans    &trans
                         >;
                 };
