@@ -63,13 +63,21 @@
                 = <&kp SQT>
                 , <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>;
         };
-            dead_letter: dead_letter {
+            dl: dead_letter {
             label = "DEAD_LETTER_MACRO";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>; // Must be 1
             bindings
                 = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>
                 , <&kp SPACE>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 
@@ -102,7 +110,7 @@
                         bindings = <
    &trans  &kp RA(N0)   &kp LS(NUBS)    &kp RA(N9)     &kp LS(N9)      &kp RA(NUBS)       &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PLAY &trans
    &trans  &kp RA(N7)   &kp NUBS        &kp RA(N8)     &kp LS(N8)      &kp RA(MINUS)      &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT  &kp CAPS   &trans
-   &trans  &kp RA(NUHS) &kp LS(N6)      &dead_letter RA(SQT)         &kp RA(RBRC)    &trans             &kp HOME    &kp PG_DN    &kp PG_UP    &kp END    &kp INS    &trans
+   &trans  &kp RA(NUHS) &kp LS(N6)      &dl RA(SQT)         &kp RA(RBRC)    &trans             &kp HOME    &kp PG_DN    &kp PG_UP    &kp END    &kp INS    &trans
                              &trans  &trans   &trans   &trans   &trans    &trans
                         >;
                 };
