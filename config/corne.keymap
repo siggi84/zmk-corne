@@ -28,7 +28,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "IS_QUOT_DQUO";
             #binding-cells = <0>;
-            bindings = <&kp LBRC>, <&kp RS(N2)>;
+            bindings = <&kp RBKT>, <&kp RS(N2)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -65,8 +65,8 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp LBKT   &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &isqudq &trans
-   &kp RBKT   &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T     &kp G         &kp M    &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &trans
+   &trans     &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &isqudq &trans
+   &trans     &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T     &kp G         &kp M    &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &trans
    &trans     &kp Z      &hm RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
                        &trans     &lt 4 ESC     &lt LOWER SPACE &lt RAISE RET &lt 3 BSPC &trans
                         >;
@@ -101,10 +101,10 @@
                 ice_layer {
                         bindings = <
    &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp SLASH  &acute_letter U  &acute_letter Y  &kp MINUS       &trans
-   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp LBRC   &acute_letter E  &acute_letter I  &acute_letter O &trans
+   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp LBKT   &acute_letter E  &acute_letter I  &acute_letter O &trans
    &trans     &trans     &trans     &trans     &trans     &trans        &trans     &trans     &kp SEMI         &acute_letter A  &trans          &trans
                              &trans  &trans   &trans   &trans   &trans    &trans
-                        >;
+                        >
                 };
         };
 };
