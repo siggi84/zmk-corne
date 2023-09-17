@@ -12,6 +12,7 @@
 #define LOWER   1
 #define RAISE   2
 #define FN      3
+#define ICE     4
 
 #define IS_QUOT RBRC
 
@@ -29,7 +30,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "IS_QUOT_DQUO";
             #binding-cells = <0>;
-            bindings = <&kp RBRC>, <&kp LBKT>;
+            bindings = <&kp LBRC>, <&kp RS(N2)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -46,8 +47,8 @@
     };
 
     macros {
-            my_one_param_macro: my_one_param_macro {
-            label = "ZM_zed_em_kay";
+            acute_letter: acute_letter {
+            label = "ACUTE_LETTER_MACRO";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>; // Must be 1
             bindings
@@ -66,10 +67,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &my_one_param_macro O   &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &isqudq &trans
-   &my_one_param_macro U   &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T     &kp G         &kp M    &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &trans
-   &my_one_param_macro A  &kp Z      &hm RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
-                       &trans     &kp ESC     &lt LOWER SPACE &lt RAISE RET &lt FN BSPC &trans
+   &acute_letter O   &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &isqudq &trans
+   &acute_letter U   &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T     &kp G         &kp M    &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &trans
+   &acute_letter A   &kp Z      &hm RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
+                       &trans     &lt ICE ESC     &lt LOWER SPACE &lt RAISE RET &lt FN BSPC &trans
                         >;
                 };
                 lower_layer {
@@ -98,5 +99,16 @@
                              &trans  &trans   &trans   &trans   &trans    &trans
                         >;
                 };
+
+                ice_layer {
+                        bindings = <
+   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp SLASH  &acute_letter U  &acute_letter Y  &kp MINUS       &trans
+   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp RBRC   &acute_letter E  &acute_letter I  &acute_letter O &trans
+   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &trans     &kp SEMI         &trans           &acute_letter A &trans
+                             &trans  &trans   &trans   &trans   &trans    &trans
+                        >;
+                };
         };
 };
+
+
