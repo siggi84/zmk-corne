@@ -111,7 +111,7 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB    &kp Q      &kp W      &kp F       &kp P           &kp B           &kp J         &kp L        &kp U          &kp Y        &isqudq     &DEL
+   &kp TAB    &kp Q      &kp W      &kp F       &kp P           &kp B           &kp J         &kp L        &kp U          &kp Y        &isqudq     &kp DEL
    &trans     &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T     &kp G           &kp M         &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &trans
    &trans     &kp Z      &hm RALT X &kp C       &kp D           &kp V           &kp K         &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
                                     &trans      &lt ICE ESC     &lmb LOWER SPACE &lmb RAISE RET &lmr FN BSPC &trans
