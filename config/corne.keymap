@@ -46,14 +46,11 @@
     };
 
     macros {
-        is_x: is_x {
-            label = "MY_IS_X";
+            my_one_param_macro: my_one_param_macro {
+            label = "ZM_zed_em_kay";
             compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings
-                = <&kp SQT>,
-                , <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>;
-                ;
+            #binding-cells = <1>; // Must be 1
+            bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>;
         };
     };
 
@@ -69,7 +66,7 @@
                         bindings = <
    &trans   &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &isqudq &trans
    &trans   &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T     &kp G         &kp M    &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &trans
-   &is_x A  &kp Z      &hm RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
+   &my_one_param_macro A  &kp Z      &hm RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
                        &trans     &kp ESC     &lt LOWER SPACE &lt RAISE RET &lt FN BSPC &trans
                         >;
                 };
