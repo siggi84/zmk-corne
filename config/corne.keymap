@@ -42,6 +42,16 @@
             bindings = <&kp>, <&kp>;
         };
 
+        hmr: homerow_modsr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODSR";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <125>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
     };
 
     macros {
@@ -76,7 +86,7 @@
    &trans     &kp Q      &kp W      &kp F       &kp P           &kp B         &kp J    &kp L        &kp U          &kp Y        &isqudq &trans
    &trans     &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T     &kp G         &kp M    &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &trans
    &trans     &kp Z      &hm RALT X &kp C       &kp D           &kp V         &kp K    &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
-                       &trans     &lt 4 ESC     &lt LOWER SPACE &lt RAISE RET &lt 3 BSPC &trans
+                       &trans     &lt 4 ESC     &lt LOWER SPACE &lt RAISE RET &hmr 3 BSPC &trans
                         >;
                 };
                 lower_layer {
