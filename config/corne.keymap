@@ -110,6 +110,11 @@
             key-positions = <8 20>;
             bindings = <&kp RA(N8)>;
         };
+        combo_grv {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp RA(NUHS)>;
+        };
     };
 
         keymap {
