@@ -104,6 +104,12 @@
             key-positions = <7 19>;
             bindings = <&kp RA(N9)>;
         };
+
+        combo_lbrc {
+            timeout-ms = <50>;
+            key-positions = <8 20>;
+            bindings = <&kp RA(N8)>;
+        };
     };
 
         keymap {
