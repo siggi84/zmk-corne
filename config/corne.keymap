@@ -41,6 +41,14 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        acute_e: acute_e {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ACUTE_E";
+            #binding-cells = <0>;
+            bindings = <&acute_letter E>, <&acute_letter_cap E>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -189,8 +197,8 @@
                 ice_layer {
                         bindings = <
    &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp SLASH  &acute_letter U  &acute_letter Y  &kp MINUS       &trans
-   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp LBKT   &acute_letter E  &acute_letter I  &acute_letter O &trans
-   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &trans     &kp SEMI         &acute_letter A  &trans          &trans
+   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp LBKT   &acute_e  &acute_letter I  &acute_letter O &trans
+   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &trans     &kp SEMI         &acute_a  &trans          &trans
                              &trans  &trans   &trans   &trans   &trans    &trans
                         >;
                 };
