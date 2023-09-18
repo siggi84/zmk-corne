@@ -74,6 +74,14 @@
                 = <&kp SQT>
                 , <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>;
         };
+            acute_letter_cap: acute_letter_cap {
+            label = "ACUTE_LETTER_MACRO_CAPITAL";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>; // Must be 1
+            bindings
+                = <&kp SQT>
+                , <&macro_param_1to1>, <&kp LS(MACRO_PLACEHOLDER)>;
+        };
             dl: dead_letter {
             label = "DEAD_LETTER_MACRO";
             compatible = "zmk,behavior-macro-one-param";
