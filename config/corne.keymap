@@ -33,6 +33,14 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        acute_a: acute_a {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ACUTE_A";
+            #binding-cells = <0>;
+            bindings = <&acute_letter A>, <&acute_letter_cap A>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -74,6 +82,7 @@
                 = <&kp SQT>
                 , <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>;
         };
+
             acute_letter_cap: acute_letter_cap {
             label = "ACUTE_LETTER_MACRO_CAPITAL";
             compatible = "zmk,behavior-macro-one-param";
@@ -82,6 +91,7 @@
                 = <&kp SQT>
                 , <&macro_param_1to1>, <&kp LS(MACRO_PLACEHOLDER)>;
         };
+
             dl: dead_letter {
             label = "DEAD_LETTER_MACRO";
             compatible = "zmk,behavior-macro-one-param";
