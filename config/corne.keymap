@@ -49,6 +49,38 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        acute_i: acute_i {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ACUTE_I";
+            #binding-cells = <0>;
+            bindings = <&acute_letter I>, <&acute_letter_cap I>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        acute_o: acute_o {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ACUTE_O";
+            #binding-cells = <0>;
+            bindings = <&acute_letter O>, <&acute_letter_cap O>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        acute_u: acute_u {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ACUTE_U";
+            #binding-cells = <0>;
+            bindings = <&acute_letter U>, <&acute_letter_cap U>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        acute_y: acute_y {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ACUTE_Y";
+            #binding-cells = <0>;
+            bindings = <&acute_letter Y>, <&acute_letter_cap Y>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -196,8 +228,8 @@
 
                 ice_layer {
                         bindings = <
-   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp SLASH  &acute_letter U  &acute_letter Y  &kp MINUS       &trans
-   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp LBKT   &acute_e  &acute_letter I  &acute_letter O &trans
+   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp SLASH  &acute_u  &acute_y  &kp MINUS       &trans
+   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp LBKT   &acute_e  &acute_i  &acute_o &trans
    &trans     &trans     &trans     &trans     &trans     &trans        &trans     &trans     &kp SEMI         &acute_a  &trans          &trans
                              &trans  &trans   &trans   &trans   &trans    &trans
                         >;
