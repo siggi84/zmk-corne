@@ -185,10 +185,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB    &kp Q      &kp W      &kp F       &kp P           &kp B           &kp J         &kp L        &kp U          &kp Y        &isqudq     &kp DEL
-   &bt BT_CLR     &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T     &kp G           &kp M         &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &bt BT_SEL 1
-   &bt BT_SEL 0     &kp Z      &hm RALT X &kp C       &kp D           &kp V           &kp K         &kp H        &hm RALT COMMA &kp DOT      &isslqu     &acute_a
-                                    &trans      &lt ICE ESC     &lmb LOWER SPACE &lmb RAISE RET &lmr FN BSPC &trans
+   &kp TAB       &kp Q      &kp W      &kp F       &kp P          &kp B            &kp J          &kp L        &kp U          &kp Y        &isqudq     &kp DEL
+   &bt BT_CLR    &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T    &kp G            &kp M          &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &bt BT_SEL 1
+   &bt BT_SEL 0  &kp Z      &hm RALT X &kp C       &kp D          &kp V            &kp K          &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
+                                       &trans      &lt ICE ESC    &lmb LOWER SPACE &lmb RAISE RET &lmr FN BSPC &trans
                         >;
                 };
                 lower_layer {
@@ -196,7 +196,7 @@
    &trans   &kp N1       &kp N2          &kp N3         &kp N4       &kp N5         &kp N6      &kp N7        &kp N8    &kp N9     &kp N0       &trans
    &trans   &kp RS(N1)   &kp RA(Q)       &kp RS(N3)     &kp RS(N4)   &kp RS(N5)     &kp LS(N7)  &kp LS(EQUAL) &kp EQUAL &kp LS(N8) &kp LS(N9)   &trans
    &trans   &trans       &kp RA(M)       &kp RA(GRAVE)  &kp RA(E)    &trans         &kp LS(N0)  &kp NUHS      &trans    &trans     &kp LS(NUHS) &trans
-                                         &trans     &trans       &trans      &trans  &trans   &trans
+                                         &trans         &trans       &trans         &trans      &trans        &trans
                         >;
                 };
 
@@ -204,8 +204,8 @@
                         bindings = <
    &trans  &kp RA(N0)   &kp LS(NUBS)    &kp RA(N9)     &kp LS(N9)      &kp RA(NUBS)       &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PLAY &trans
    &trans  &kp RA(N7)   &kp NUBS        &kp RA(N8)     &kp LS(N8)      &kp RA(MINUS)      &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT  &kp CAPS   &trans
-   &trans  &kp RA(NUHS) &kp LS(N6)      &dl RA(SQT)    &kp RA(RBRC)    &trans             &kp HOME    &kp PG_DN    &kp PG_UP    &kp END    &kp INS    &trans
-                             &trans  &trans   &trans   &trans   &trans    &trans
+   &trans  &kp RA(NUHS) &kp LS(N6)      &dl RA(SQT)    &kp RA(RBKT)    &trans             &kp HOME    &kp PG_DN    &kp PG_UP    &kp END    &kp INS    &trans
+                                        &trans         &trans          &trans             &trans      &trans       &trans
                         >;
                 };
                 adjust_layer {
@@ -222,16 +222,16 @@
    &trans     &kp F12     &kp F7     &kp F8     &kp F9     &kp PSCRN        &trans     &trans     &trans     &trans     &trans     &trans
    &trans     &kp F11     &kp F4     &kp F5     &kp F6     &kp SLCK         &trans     &trans     &trans     &trans     &trans     &trans
    &trans     &kp F10     &kp F1     &kp F2     &kp F3     &kp PAUSE_BREAK  &trans     &trans     &trans     &trans     &trans     &trans
-                             &trans  &trans   &trans   &trans   &trans    &trans
+                                     &trans     &trans     &trans           &trans     &trans     &trans
                         >;
                 };
 
                 ice_layer {
                         bindings = <
-   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp SLASH  &acute_u  &acute_y  &kp MINUS       &trans
-   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp LBKT   &acute_e  &acute_i  &acute_o &trans
-   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &trans     &kp SEMI         &acute_a  &trans          &trans
-                             &trans  &trans   &trans   &trans   &trans    &trans
+   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp SLASH  &acute_u   &acute_y  &kp MINUS       &trans
+   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp LBKT   &acute_e   &acute_i  &acute_o        &trans
+   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &trans     &kp SEMI   &acute_a  &trans          &trans
+                                    &trans     &trans     &trans        &trans     &DEL       &trans
                         >;
                 };
         };
