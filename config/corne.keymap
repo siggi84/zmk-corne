@@ -231,7 +231,7 @@
    &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp SLASH  &acute_u   &acute_y  &kp MINUS       &trans
    &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp LBKT   &acute_e   &acute_i  &acute_o        &trans
    &trans     &trans     &trans     &trans     &trans     &trans        &trans     &trans     &kp SEMI   &acute_a  &trans          &trans
-                                    &trans     &trans     &trans        &trans     &DEL       &trans
+                                    &trans     &trans     &trans        &trans     &kp DEL       &trans
                         >;
                 };
         };
