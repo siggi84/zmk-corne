@@ -106,7 +106,7 @@
             label = "LAYER_MODS_BALANCED";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <175>;
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
         };
@@ -185,9 +185,9 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB       &kp Q      &kp W      &kp F       &kp P          &kp B            &kp J          &kp L        &kp U          &kp Y        &isqudq     &kp DEL
-   &bt BT_CLR    &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T    &kp G            &kp M          &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &bt BT_SEL 1
-   &bt BT_SEL 0  &kp Z      &hm RALT X &kp C       &kp D          &kp V            &kp K          &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
+   &kp TAB &kp Q      &kp W      &kp F       &kp P          &kp B            &kp J          &kp L        &kp U          &kp Y        &isqudq     &kp DEL
+   &trans  &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T    &kp G            &kp M          &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &trans
+   &trans  &kp Z      &hm RALT X &kp C       &kp D          &kp V            &kp K          &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
                                        &trans      &lt ICE ESC    &lmb LOWER SPACE &lmb RAISE RET &lmr FN BSPC &trans
                         >;
                 };
@@ -210,9 +210,9 @@
                 };
                 adjust_layer {
                         bindings = <
-   &trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4 &trans     &trans     &trans     &trans     &trans     &trans
-   &trans     &trans        &trans        &trans        &trans        &trans       &trans     &bt BT_CLR &bt BT_NXT &bt BT_PRV &trans     &trans
-   &trans     &trans        &trans        &trans        &trans        &trans       &trans     &trans     &trans     &trans     &trans     &trans
+   &trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4 &trans     &bt BT_CLR &bt BT_NXT &bt BT_PRV &trans     &trans
+   &trans     &kp A         &kp R         &kp S         &kp T         &trans       &trans     &kp N      &kp E      &kp I      &kp I      &trans
+   &trans     &trans        &kp X         &trans        &trans        &trans       &trans     &trans     &trans     &kp COMMA  &trans     &trans
                                           &trans        &trans        &trans       &trans     &trans     &trans
                         >;
                 };
