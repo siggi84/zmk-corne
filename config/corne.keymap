@@ -186,7 +186,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &kp TAB &kp Q      &kp W      &kp F       &kp P          &kp B            &kp J          &kp L        &kp U          &kp Y        &isqudq     &kp DEL
-   &trans  &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T    &kp G            &kp M          &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &trans
+   &trans  &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T    &kp G            &kp M          &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &kp SQT
    &trans  &kp Z      &hm RALT X &kp C       &kp D          &kp V            &kp K          &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
                                        &trans      &lt ICE ESC    &lmb LOWER SPACE &lmb RAISE RET &lmr FN BSPC &trans
                         >;
@@ -211,7 +211,7 @@
                 adjust_layer {
                         bindings = <
    &trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4 &trans     &bt BT_CLR &bt BT_NXT &bt BT_PRV &trans     &trans
-   &trans     &kp A         &kp R         &kp S         &kp T         &trans       &trans     &kp N      &kp E      &kp I      &kp I      &trans
+   &trans     &kp A         &kp R         &kp S         &kp T         &trans       &trans     &kp N      &kp E      &kp I      &kp O      &trans
    &trans     &trans        &kp X         &trans        &trans        &trans       &trans     &trans     &trans     &kp COMMA  &trans     &trans
                                           &trans        &trans        &trans       &trans     &trans     &trans
                         >;
