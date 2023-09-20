@@ -18,6 +18,13 @@
 #define IS_ODIA MINUS
 #define IS_MINUS EQUAL
 #define IS_ETH LBKT
+#define IS_SQT RBKT
+#define IS_AT RA(Q)
+#define IS_SLASH LS(N7)
+#define IS_UNDER LS(EQUAL)
+#define IS_LPAR LS(N8) 
+#define IS_RPAR LS(N9) 
+
 
 / {
     behaviors {
@@ -33,7 +40,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "IS_QUOT_DQUO";
             #binding-cells = <0>;
-            bindings = <&kp RBKT>, <&kp RS(N2)>;
+            bindings = <&kp IS_SQT>, <&kp RS(N2)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -240,10 +247,10 @@
                 };
                 lower_layer {
                         bindings = <
-   &trans   &kp N1       &kp N2          &kp N3         &kp N4       &kp N5         &kp N6      &kp N7        &kp N8    &kp N9     &kp N0       &trans
-   &trans   &kp RS(N1)   &kp RA(Q)       &kp RS(N3)     &kp RS(N4)   &kp RS(N5)     &kp LS(N7)  &kp LS(EQUAL) &kp IS_MINUS &kp LS(N8) &kp LS(N9)   &trans
-   &trans   &trans       &kp RA(M)       &kp RA(GRAVE)  &kp RA(E)    &trans         &kp LS(N0)  &kp NUHS      &trans    &trans     &kp LS(NUHS) &trans
-                                         &trans         &trans       &trans         &trans      &trans        &trans
+   &trans   &kp N1       &kp N2          &kp N3         &kp N4       &kp N5         &kp N6       &kp N7        &kp N8       &kp N9      &kp N0       &trans
+   &trans   &kp EXCL     &kp IS_AT       &kp HASH       &kp DOLLAR   &kp PERCENT    &kp IS_SLASH &kp IS_UNDER  &kp IS_MINUS &kp IS_LPAR &kp IS_RPAR  &trans
+   &trans   &trans       &kp RA(M)       &kp RA(GRAVE)  &kp RA(E)    &trans         &kp LS(N0)   &kp NUHS      &trans       &trans      &kp LS(NUHS) &trans
+                                         &trans         &trans       &trans         &trans       &trans        &trans
                         >;
                 };
 
