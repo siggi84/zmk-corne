@@ -138,7 +138,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_LEFT_SHIFT";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred
             tapping-term-ms = <SHIFT_TAP>;                        // <---[[produces tap if held longer than tapping-term-ms]]
             quick-tap-ms = <QUICK_TAP>;
             bindings = <&kp>, <&kp>;
@@ -149,7 +149,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_RIGHT_SHIFT";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <SHIFT_TAP>;                        // <---[[produces tap if held longer than tapping-term-ms]]
             quick-tap-ms = <QUICK_TAP>;
             bindings = <&kp>, <&kp>;
