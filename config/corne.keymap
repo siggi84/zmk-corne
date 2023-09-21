@@ -33,6 +33,14 @@
 #define IS_PIPE RA(NUBS)
 #define IS_BSLH RA(MINUS)
 #define IS_MICR RA(M)
+#define IS_EURO RA(E)
+#define IS_EQUAL LS(N0)
+#define IS_MULTIPLY LS(NUHS)
+#define IS_PLUS NUHS
+#define IS_GRAVE RA(NUHS)
+#define IS_AMPS LS(N6)
+#define IS_TILDE RA(SQT)
+#define IS_TILDE RA(RBKT) 
 
 / {
     behaviors {
@@ -212,19 +220,19 @@
                 };
                 lower_layer {
                         bindings = <
-   &trans   &kp N1       &kp N2          &kp N3         &kp N4       &kp N5         &kp N6       &kp N7        &kp N8       &kp N9      &kp N0       &trans
-   &trans   &kp EXCL     &kp IS_AT       &kp HASH       &kp DLLR     &kp PRCNT      &kp IS_FSLH  &kp IS_UNDER  &kp IS_MINUS &kp IS_LPAR &kp IS_RPAR  &trans
-   &trans   &trans       &kp IS_MICR     &kp RA(GRAVE)  &kp RA(E)    &trans         &kp LS(N0)   &kp NUHS      &trans       &trans      &kp LS(NUHS) &trans
+   &trans   &kp N1       &kp N2          &kp N3         &kp N4       &kp N5         &kp N6       &kp N7        &kp N8       &kp N9      &kp N0          &trans
+   &trans   &kp EXCL     &kp IS_AT       &kp HASH       &kp DLLR     &kp PRCNT      &kp IS_FSLH  &kp IS_UNDER  &kp IS_MINUS &kp IS_LPAR &kp IS_RPAR     &trans
+   &trans   &trans       &kp IS_MICR     &kp RA(GRAVE)  &kp IS_EURO  &trans         &kp IS_EQUAL &kp IS_PLUS   &trans       &trans      &kp IS_MULTIPLY &trans
                                          &trans         &trans       &trans         &trans       &trans        &trans
                         >;
                 };
 
                 raise_layer {
                         bindings = <
-   &trans  &kp IS_LBRC &kp IS_GT    &kp IS_RBKT     &kp IS_RPAR      &kp IS_PIPE       &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PLAY &trans
-   &trans  &kp IS_RBRC &kp IS_LT    &kp IS_LBKT     &kp IS_LPAR      &kp IS_BSLH       &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT  &kp CAPS   &trans
-   &trans  &kp RA(NUHS) &kp LS(N6)      &dl RA(SQT)    &kp RA(RBKT)    &trans             &kp HOME    &kp PG_DN    &kp PG_UP    &kp END    &kp INS    &trans
-                                        &trans         &trans          &trans             &trans      &trans       &trans
+   &trans  &kp IS_LBRC  &kp IS_GT    &kp IS_RBKT     &kp IS_RPAR      &kp IS_PIPE       &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PLAY &trans
+   &trans  &kp IS_RBRC  &kp IS_LT    &kp IS_LBKT     &kp IS_LPAR      &kp IS_BSLH       &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT  &kp CAPS   &trans
+   &trans  &kp IS_GRAVE &kp IS_AMP   &dl RA(SQT)     &kp RA(RBKT)     &trans            &kp HOME    &kp PG_DN    &kp PG_UP    &kp END    &kp INS    &trans
+                                     &trans          &trans           &trans            &trans      &trans       &trans
                         >;
                 };
                 adjust_layer {
