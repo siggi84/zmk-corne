@@ -231,7 +231,7 @@
                         bindings = <
    &trans  &kp IS_LBRC  &kp IS_GT    &kp IS_RBKT     &kp IS_RPAR      &kp IS_PIPE       &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PLAY &trans
    &trans  &kp IS_RBRC  &kp IS_LT    &kp IS_LBKT     &kp IS_LPAR      &kp IS_BSLH       &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT  &kp CAPS   &trans
-   &trans  &kp IS_GRAVE &kp IS_AMP   &dl RA(SQT)     &kp RA(RBKT)     &trans            &kp HOME    &kp PG_DN    &kp PG_UP    &kp END    &kp INS    &trans
+   &trans  &kp IS_GRAVE &kp IS_AMPS  &dl RA(SQT)     &kp RA(RBKT)     &trans            &kp HOME    &kp PG_DN    &kp PG_UP    &kp END    &kp INS    &trans
                                      &trans          &trans           &trans            &trans      &trans       &trans
                         >;
                 };
