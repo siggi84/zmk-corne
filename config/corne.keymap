@@ -15,13 +15,32 @@
 #define FN      4
 #define ICE     5
 
+#define IS_ODIA MINUS
+#define IS_MINUS EQUAL
+#define IS_ETH LBKT
+#define IS_SQT RBKT
+#define IS_AT RA(Q)
+#define IS_FSLH LS(N7)
+#define IS_UNDER LS(EQUAL)
+#define IS_LPAR LS(N8)
+#define IS_RPAR LS(N9)
+#define IS_LBRC RA(N0)
+#define IS_RBRC RA(N7)
+#define IS_GT LS(NUBS)
+#define IS_LT NUBS
+#define IS_LBKT RA(N8)
+#define IS_RBKT RA(N9)
+#define IS_PIPE RA(NUBS)
+#define IS_BSLH RA(MINUS)
+#define IS_MICR RA(M)
+
 / {
     behaviors {
         isslqu: is_slsh_ques {
             compatible = "zmk,behavior-mod-morph";
-            label = "IS_SLASH_QUESTION";
+            label = "IS_FSLH_QUESTION";
             #binding-cells = <0>;
-            bindings = <&kp LS(N7)>, <&kp LS(RBRC)>;
+            bindings = <&kp IS_FSLH>, <&kp LS(RBRC)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -29,7 +48,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "IS_QUOT_DQUO";
             #binding-cells = <0>;
-            bindings = <&kp RBKT>, <&kp RS(N2)>;
+            bindings = <&kp IS_SQT>, <&kp RS(N2)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -188,22 +207,22 @@
    &kp TAB &kp Q      &kp W      &kp F       &kp P          &kp B            &kp J          &kp L        &kp U          &kp Y        &isqudq     &kp DEL
    &trans  &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T    &kp G            &kp M          &hm RSHFT N  &hm RCTRL E    &hm LALT I   &hm LGUI O  &kp SQT
    &trans  &kp Z      &hm RALT X &kp C       &kp D          &kp V            &kp K          &kp H        &hm RALT COMMA &kp DOT      &isslqu     &trans
-                                       &trans      &lt ICE ESC    &lmb LOWER SPACE &lmb RAISE RET &lmr FN BSPC &trans
+                                 &trans      &lt ICE ESC    &lmb LOWER SPACE &lmb RAISE RET &lmr FN BSPC &trans
                         >;
                 };
                 lower_layer {
                         bindings = <
-   &trans   &kp N1       &kp N2          &kp N3         &kp N4       &kp N5         &kp N6      &kp N7        &kp N8    &kp N9     &kp N0       &trans
-   &trans   &kp RS(N1)   &kp RA(Q)       &kp RS(N3)     &kp RS(N4)   &kp RS(N5)     &kp LS(N7)  &kp LS(EQUAL) &kp EQUAL &kp LS(N8) &kp LS(N9)   &trans
-   &trans   &trans       &kp RA(M)       &kp RA(GRAVE)  &kp RA(E)    &trans         &kp LS(N0)  &kp NUHS      &trans    &trans     &kp LS(NUHS) &trans
-                                         &trans         &trans       &trans         &trans      &trans        &trans
+   &trans   &kp N1       &kp N2          &kp N3         &kp N4       &kp N5         &kp N6       &kp N7        &kp N8       &kp N9      &kp N0       &trans
+   &trans   &kp EXCL     &kp IS_AT       &kp HASH       &kp DLLR     &kp PRCNT      &kp IS_FSLH  &kp IS_UNDER  &kp IS_MINUS &kp IS_LPAR &kp IS_RPAR  &trans
+   &trans   &trans       &kp IS_MICR     &kp RA(GRAVE)  &kp RA(E)    &trans         &kp LS(N0)   &kp NUHS      &trans       &trans      &kp LS(NUHS) &trans
+                                         &trans         &trans       &trans         &trans       &trans        &trans
                         >;
                 };
 
                 raise_layer {
                         bindings = <
-   &trans  &kp RA(N0)   &kp LS(NUBS)    &kp RA(N9)     &kp LS(N9)      &kp RA(NUBS)       &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PLAY &trans
-   &trans  &kp RA(N7)   &kp NUBS        &kp RA(N8)     &kp LS(N8)      &kp RA(MINUS)      &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT  &kp CAPS   &trans
+   &trans  &kp IS_LBRC &kp IS_GT    &kp IS_RBKT     &kp IS_RPAR      &kp IS_PIPE       &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PLAY &trans
+   &trans  &kp IS_RBRC &kp IS_LT    &kp IS_LBKT     &kp IS_LPAR      &kp IS_BSLH       &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT  &kp CAPS   &trans
    &trans  &kp RA(NUHS) &kp LS(N6)      &dl RA(SQT)    &kp RA(RBKT)    &trans             &kp HOME    &kp PG_DN    &kp PG_UP    &kp END    &kp INS    &trans
                                         &trans         &trans          &trans             &trans      &trans       &trans
                         >;
@@ -228,8 +247,8 @@
 
                 ice_layer {
                         bindings = <
-   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp SLASH  &acute_u   &acute_y  &kp MINUS       &trans
-   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp LBKT   &acute_e   &acute_i  &acute_o        &trans
+   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp SLASH  &acute_u   &acute_y  &kp IS_ODIA     &trans
+   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp IS_ETH &acute_e   &acute_i  &acute_o        &trans
    &trans     &trans     &trans     &trans     &trans     &trans        &trans     &trans     &kp SEMI   &acute_a  &trans          &trans
                                     &trans     &trans     &trans        &trans     &kp DEL       &trans
                         >;
