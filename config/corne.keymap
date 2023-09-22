@@ -13,11 +13,12 @@
 #define QUICK_TAP    0
 
 #define DEFAULT 0
-#define LOWER   1
-#define RAISE   2
-#define ADJUST  3
-#define FN      4
-#define ICE     5
+#define MIRYOKU 1
+#define LOWER   2
+#define RAISE   3
+#define ADJUST  4
+#define FN      5
+#define ICE     6
 
 #define IS_ODIA MINUS
 #define IS_MINUS EQUAL
@@ -252,16 +253,26 @@
                         bindings = <
    &kp TAB &kp Q       &kp W       &kp F        &kp P          &kp B            &kp J          &kp L        &kp U          &kp Y        &isqudq     &kp DEL
    &trans  &hml LGUI A &hml LALT R &hml LCTRL S &hmls LSHFT T   &kp G            &kp M         &hmrs RSHFT N &hmr RCTRL E   &hmr LALT I  &hmr LGUI O &kp SQT
-   &trans  &kp Z       &hml RALT X &kp C        &kp D          &kp V            &kp K          &kp H        &hmr RALT COMMA &kp DOT      &isslqu     &trans
+   &tog MIRYOKU  &kp Z       &hml RALT X &kp C        &kp D          &kp V            &kp K          &kp H        &hmr RALT COMMA &kp DOT      &isslqu     &trans
                                  &trans      &lt ICE ESC    &lmb LOWER SPACE &lmb RAISE RET &lmr FN BSPC &trans
                         >;
                 };
+
+                miryoku_layer {
+                        bindings = <
+   &none  &kp Q       &kp W       &kp F        &kp P          &kp B            &kp J          &kp L         &kp U          &kp Y        &isqudq      &none
+   &none  &hml LGUI A &hml LALT R &hml LCTRL S &hmls LSHFT T  &kp G            &kp M          &hmrs RSHFT N &hmr RCTRL E   &hmr LALT I  &hmr LGUI O &none
+   &trans &kp Z       &hml RALT X &kp C        &kp D          &kp V            &kp K          &kp H         &hmr RALT COMMA &kp DOT     &isslqu     &none
+                                  &trans       &lt ICE ESC    &lmb LOWER SPACE &lmb RAISE RET &lmr FN BSPC  &kp DEL
+                        >;
+                };
+
                 lower_layer {
                         bindings = <
    &trans   &kp N1       &kp N2          &kp N3         &kp N4       &kp N5         &kp N6       &kp N7        &kp N8       &kp N9      &kp N0          &trans
    &trans   &kp EXCL     &kp IS_AT       &kp HASH       &kp DLLR     &kp PRCNT      &kp IS_FSLH  &kp IS_UNDER  &kp IS_MINUS &kp IS_LPAR &kp IS_RPAR     &trans
    &trans   &trans       &kp IS_MICR     &kp RA(GRAVE)  &kp IS_EURO  &trans         &kp IS_EQUAL &kp IS_PLUS   &trans       &trans      &kp IS_MULTIPLY &trans
-                                         &trans         &trans       &trans         &trans       &trans        &trans
+                                         &kp ESC        &kp SPACE    &kp TAB        &kp ENTER    &kp BSPC      &lmr FN BSPC
                         >;
                 };
 
@@ -299,6 +310,7 @@
                                     &trans     &trans     &trans        &trans     &kp DEL    &trans
                         >;
                 };
+
         };
 };
 
