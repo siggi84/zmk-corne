@@ -335,7 +335,7 @@
                 miryoku_sym {
                         bindings = <
    &trans     &kp IS_LBRC  &kp IS_AMPS &kp IS_MULTIPLY  &kp IS_LPAR     &kp IS_RBRC      &trans     &trans     &trans     &trans     &trans     &trans
-   &trans     &kp COLON    &kp DLLR    &kp PERCENT      &kp dl RA(SQT)  &kp IS_PLUS      &trans     &trans     &trans     &trans     &trans     &trans
+   &trans     &kp COLON    &kp DLLR    &kp PERCENT      &dl RA(SQT)     &kp IS_PLUS      &trans     &trans     &trans     &trans     &trans     &trans
    &trans     &kp IS_TILDE &kp EXCL    &kp IS_A         &kp HASH        &kp IS_PIPE      &trans     &trans     &trans     &trans     &trans     &trans
                                        &kp IS_LPAR    &kp IS_RPAR     &kp IS_UNDER     &trans     &trans     &trans
                         >;
