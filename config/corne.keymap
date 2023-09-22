@@ -50,8 +50,8 @@
 #define IS_GRAVE RA(NUHS)
 #define IS_AMPS LS(N6)
 #define IS_TILDE RA(SQT)
-#define IS_COLON LS(DOT)
-#define IS_SEMI LS(SEMI)
+#define IS_COLON LS(RBKT)
+#define IS_SEMI LS(COMMA)
 
 
 / {
@@ -332,8 +332,8 @@
                 miryoku_num {
                         bindings = <
    &none     &kp IS_LBKT  &kp N7     &kp N8     &kp N9     &kp IS_RBKT      &none     &none     &none     &none     &none     &none
-   &none     &kp IS_SEMI  &kp N4     &kp N5     &kp N6     &kp SEMI         &none     &kp RSHFT &kp LCTRL &kp RALT  &kp LGUI  &none
-   &none     &kp IS_BSLH  &kp N1     &kp N2     &kp N3     &kp IS_GRAVE     &none     &none     &none     &none     &none     &none
+   &none     &kp IS_SEMI  &kp N4     &kp N5     &kp N6     &kp IS_EQUAL     &none     &kp RSHFT &kp LCTRL &kp RALT  &kp LGUI  &none
+   &none     &kp IS_GRAVE &kp N1     &kp N2     &kp N3     &kp IS_BSLH      &none     &none     &none     &none     &none     &none
                                      &kp DOT    &kp N0     &kp IS_MINUS     &none     &none     &none
                         >;
                 };
