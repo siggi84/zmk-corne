@@ -211,8 +211,8 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <LOWER RAISE>;
+            then-layer = <ADJUST>;
         };
     };
 
@@ -251,14 +251,14 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB &kp Q       &kp W       &kp F        &kp P          &kp B            &kp J          &kp L        &kp U          &kp Y        &isqudq     &kp DEL
-   &trans  &hml LGUI A &hml LALT R &hml LCTRL S &hmls LSHFT T   &kp G            &kp M         &hmrs RSHFT N &hmr RCTRL E   &hmr LALT I  &hmr LGUI O &kp SQT
+   &kp TAB       &kp Q       &kp W       &kp F        &kp P          &kp B            &kp J          &kp L        &kp U          &kp Y        &isqudq     &kp DEL
+   &trans        &hml LGUI A &hml LALT R &hml LCTRL S &hmls LSHFT T  &kp G            &kp M          &hmrs RSHFT N &hmr RCTRL E   &hmr LALT I  &hmr LGUI O &kp SQT
    &tog MIRYOKU  &kp Z       &hml RALT X &kp C        &kp D          &kp V            &kp K          &kp H        &hmr RALT COMMA &kp DOT      &isslqu     &trans
-                                 &trans      &lt ICE ESC    &lmb LOWER SPACE &lmb RAISE RET &lmr FN BSPC &trans
+                                         &trans       &lt ICE ESC    &lmb LOWER SPACE &lmb RAISE RET &lmr FN BSPC &trans
                         >;
                 };
 
-                miryoku_layer {
+                miryoku_base {
                         bindings = <
    &none  &kp Q       &kp W       &kp F        &kp P          &kp B            &kp J          &kp L         &kp U          &kp Y        &isqudq      &none
    &none  &hml LGUI A &hml LALT R &hml LCTRL S &hmls LSHFT T  &kp G            &kp M          &hmrs RSHFT N &hmr RCTRL E   &hmr LALT I  &hmr LGUI O &none
@@ -308,6 +308,15 @@
    &trans     &trans     &trans     &trans     &trans     &trans        &trans     &kp IS_ETH &acute_e   &acute_i  &acute_o        &trans
    &trans     &trans     &trans     &trans     &trans     &trans        &trans     &trans     &kp SEMI   &acute_a  &trans          &trans
                                     &trans     &trans     &trans        &trans     &kp DEL    &trans
+                        >;
+                };
+
+                miryoku_nav {
+                        bindings = <
+   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &trans       &trans       &trans     &trans     &trans
+   &trans     &trans     &trans     &trans     &trans     &trans        &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT  &kp CAPS   &trans
+   &trans     &trans     &trans     &trans     &trans     &trans        &kp HOME   &kp PG_DN    &kp PG_UP    &kp END    &kp INS    &trans
+                                    &trans     &trans     &trans        &kp ENTER  &kp BSPC     &kp DEL
                         >;
                 };
 
