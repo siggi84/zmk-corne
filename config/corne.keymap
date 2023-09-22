@@ -49,8 +49,8 @@
 #define IS_PLUS NUHS
 #define IS_GRAVE RA(NUHS)
 #define IS_AMPS LS(N6)
-#define IS_TILDE RA(SQT)
-#define IS_COLON LS(RBKT)
+#define IS_TILDE RA(RBKT)
+#define IS_COLON LS(DOT)
 #define IS_SEMI LS(COMMA)
 
 
@@ -342,7 +342,7 @@
                         bindings = <
    &none     &kp IS_LBRC  &kp IS_AMPS &kp IS_MULTIPLY  &kp IS_LPAR     &kp IS_RBRC      &none     &none     &none     &none     &none     &none
    &none     &kp IS_COLON    &kp DLLR &kp PERCENT      &dl RA(SQT)     &kp IS_PLUS      &none     &kp RSHFT  &kp LCTRL  &kp RALT   &kp LGUI   &none
-   &none     &kp IS_TILDE &kp EXCL    &kp IS_AMPS      &kp HASH        &kp IS_PIPE      &none     &none     &none     &none     &none     &none
+   &none     &kp IS_TILDE &kp EXCL    &kp IS_AT        &kp HASH        &kp IS_PIPE      &none     &none     &none     &none     &none     &none
                                       &kp IS_LPAR      &kp IS_RPAR     &kp IS_UNDER     &none     &none     &none
                         >;
                 };
