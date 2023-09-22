@@ -23,6 +23,7 @@
 #define MIR_NAV 7
 #define MIR_NUM 8
 #define MIR_SYM 9
+#define MIR_MEDIA 10
 
 #define IS_ODIA MINUS
 #define IS_MINUS EQUAL
@@ -269,7 +270,7 @@
    &none  &kp Q       &kp W       &kp F        &kp P              &kp B            &kp J          &kp L         &kp U          &kp Y        &isqudq      &none
    &none  &hml LGUI A &hml LALT R &hml LCTRL S &hmls LSHFT T      &kp G            &kp M          &hmrs RSHFT N &hmr RCTRL E   &hmr LALT I  &hmr LGUI O &none
    &trans &kp Z       &hml RALT X &kp C        &kp D              &kp V            &kp K          &kp H         &hmr RALT COMMA &kp DOT     &isslqu     &none
-                                  &kp ESC      &lmb MIR_NAV SPACE &kp TAB          &lmb MIR_SYM RET &lmr MIR_NUM BSPC  &lmr FN DEL
+                                  &lmb MIR_MEDIA ESC      &lmb MIR_NAV SPACE &kp TAB          &lmb MIR_SYM RET &lmr MIR_NUM BSPC  &lmr FN DEL
                         >;
                 };
 
