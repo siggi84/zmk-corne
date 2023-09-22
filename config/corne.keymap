@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define TAPPING_TERM 200
 #define SHIFT_TAP    150
@@ -48,6 +49,8 @@
 #define IS_GRAVE RA(NUHS)
 #define IS_AMPS LS(N6)
 #define IS_TILDE RA(SQT)
+#define IS_COLON LS(DOT)
+#define IS_SEMI LS(SEMI)
 
 
 / {
@@ -299,7 +302,7 @@
                 fn_layer {
                         bindings = <
    &none     &kp F12     &kp F7     &kp F8     &kp F9     &kp PSCRN        &none     &none     &none     &none     &none     &none
-   &none     &kp F11     &kp F4     &kp F5     &kp F6     &kp SLCK         &none     &none     &none     &none     &none     &none
+   &none     &kp F11     &kp F4     &kp F5     &kp F6     &kp SLCK         &none     &kp RSHFT &kp LCTRL &kp RALT  &kp LGUI  &trans
    &none     &kp F10     &kp F1     &kp F2     &kp F3     &kp PAUSE_BREAK  &none     &none     &none     &none     &none     &none
                                     &none      &none      &none            &none     &none     &none
                         >;
@@ -316,28 +319,38 @@
 
                 miryoku_nav {
                         bindings = <
-   &trans     &trans     &trans     &trans     &trans     &trans        &trans     &trans       &trans       &trans     &trans     &trans
-   &trans     &kp LGUI   &kp RALT   &kp RCTRL  &kp LSHFT  &trans        &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT  &kp CAPS   &trans
-   &trans     &trans     &trans     &trans     &trans     &trans        &kp HOME   &kp PG_DN    &kp PG_UP    &kp END    &kp INS    &trans
-                                    &trans     &trans     &trans        &kp ENTER  &kp BSPC     &kp DEL
+   &none     &none     &none     &none     &none     &none        &none      &none        &none        &none      &none      &none
+   &none     &kp LGUI  &kp RALT  &kp RCTRL &kp LSHFT &none        &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT  &kp CAPS   &none
+   &none     &none     &none     &none     &none     &none        &kp HOME   &kp PG_DN    &kp PG_UP    &kp END    &kp INS    &none
+                                 &none     &none     &none        &kp ENTER  &kp BSPC     &kp DEL
                         >;
                 };
 
                 miryoku_num {
                         bindings = <
-   &trans     &kp IS_LBKT  &kp N7     &kp N8     &kp N9     &kp IS_RBKT      &trans     &trans     &trans     &trans     &trans     &trans
-   &trans     &kp IS_EQUAL &kp N4     &kp N5     &kp N6     &kp SEMI         &trans     &kp RSHFT  &kp LCTRL  &kp RALT   &kp LGUI   &trans
-   &trans     &kp IS_BSLH  &kp N1     &kp N2     &kp N3     &kp IS_GRAVE     &trans     &trans     &trans     &trans     &trans     &trans
-                                      &kp DOT    &kp N0     &kp IS_MINUS     &trans     &trans     &trans
+   &none     &kp IS_LBKT  &kp N7     &kp N8     &kp N9     &kp IS_RBKT      &none     &none     &none     &none     &none     &none
+   &none     &kp IS_SEMI  &kp N4     &kp N5     &kp N6     &kp SEMI         &none     &kp RSHFT &kp LCTRL &kp RALT  &kp LGUI  &none
+   &none     &kp IS_BSLH  &kp N1     &kp N2     &kp N3     &kp IS_GRAVE     &none     &none     &none     &none     &none     &none
+                                     &kp DOT    &kp N0     &kp IS_MINUS     &none     &none     &none
                         >;
                 };
 
                 miryoku_sym {
                         bindings = <
-   &trans     &kp IS_LBRC  &kp IS_AMPS &kp IS_MULTIPLY  &kp IS_LPAR     &kp IS_RBRC      &trans     &trans     &trans     &trans     &trans     &trans
-   &trans     &kp COLON    &kp DLLR    &kp PERCENT      &dl RA(SQT)     &kp IS_PLUS      &trans     &kp RSHFT  &kp LCTRL  &kp RALT   &kp LGUI   &trans
-   &trans     &kp IS_TILDE &kp EXCL    &kp IS_AMPS      &kp HASH        &kp IS_PIPE      &trans     &trans     &trans     &trans     &trans     &trans
-                                       &kp IS_LPAR      &kp IS_RPAR     &kp IS_UNDER     &trans     &trans     &trans
+   &none     &kp IS_LBRC  &kp IS_AMPS &kp IS_MULTIPLY  &kp IS_LPAR     &kp IS_RBRC      &none     &none     &none     &none     &none     &none
+   &none     &kp IS_COLON    &kp DLLR    &kp PERCENT      &dl RA(SQT)     &kp IS_PLUS      &none     &kp RSHFT  &kp LCTRL  &kp RALT   &kp LGUI   &none
+   &none     &kp IS_TILDE &kp EXCL    &kp IS_AMPS      &kp HASH        &kp IS_PIPE      &none     &none     &none     &none     &none     &none
+                                      &kp IS_LPAR      &kp IS_RPAR     &kp IS_UNDER     &none     &none     &none
+                        >;
+                };
+
+// TODO: Program BT_SEL to clear profile when holding shift.
+                miryoku_media {
+                        bindings = <
+   &none     &none     &none     &none     &none     &none        &bt BT_CLR   &none        &none        &none        &none        &none
+   &none     &kp LGUI  &kp RALT  &kp RCTRL &kp LSHFT &none        &kp C_PREV   &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT   &none        &none
+   &none     &none     &none     &none     &none     &none        &out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none
+                                 &none     &none     &none        &kp C_STOP   &kp C_PLAY   &kp C_MUTE
                         >;
                 };
 
