@@ -48,7 +48,7 @@
 #define IS_GRAVE RA(NUHS)
 #define IS_AMPS LS(N6)
 #define IS_TILDE RA(SQT)
-#define IS_TILDE RA(RBKT) 
+
 
 / {
     behaviors {
