@@ -19,6 +19,9 @@
 #define ADJUST  4
 #define FN      5
 #define ICE     6
+#define MIR_NAV 7
+#define MIR_NUM 8
+#define MIR_SYM 9
 
 #define IS_ODIA MINUS
 #define IS_MINUS EQUAL
@@ -260,10 +263,10 @@
 
                 miryoku_base {
                         bindings = <
-   &none  &kp Q       &kp W       &kp F        &kp P          &kp B            &kp J          &kp L         &kp U          &kp Y        &isqudq      &none
-   &none  &hml LGUI A &hml LALT R &hml LCTRL S &hmls LSHFT T  &kp G            &kp M          &hmrs RSHFT N &hmr RCTRL E   &hmr LALT I  &hmr LGUI O &none
-   &trans &kp Z       &hml RALT X &kp C        &kp D          &kp V            &kp K          &kp H         &hmr RALT COMMA &kp DOT     &isslqu     &none
-                                  &trans       &lt ICE ESC    &lmb LOWER SPACE &lmb RAISE RET &lmr FN BSPC  &kp DEL
+   &none  &kp Q       &kp W       &kp F        &kp P              &kp B            &kp J          &kp L         &kp U          &kp Y        &isqudq      &none
+   &none  &hml LGUI A &hml LALT R &hml LCTRL S &hmls LSHFT T      &kp G            &kp M          &hmrs RSHFT N &hmr RCTRL E   &hmr LALT I  &hmr LGUI O &none
+   &trans &kp Z       &hml RALT X &kp C        &kp D              &kp V            &kp K          &kp H         &hmr RALT COMMA &kp DOT     &isslqu     &none
+                                  &kp ESC      &lmb MIR_NAV SPACE &kp TAB          &lmb MIR_SYM RET &lmr MIR_NUM BSPC  &lmr FN DEL
                         >;
                 };
 
@@ -317,6 +320,24 @@
    &trans     &trans     &trans     &trans     &trans     &trans        &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT  &kp CAPS   &trans
    &trans     &trans     &trans     &trans     &trans     &trans        &kp HOME   &kp PG_DN    &kp PG_UP    &kp END    &kp INS    &trans
                                     &trans     &trans     &trans        &kp ENTER  &kp BSPC     &kp DEL
+                        >;
+                };
+
+                miryoku_num {
+                        bindings = <
+   &trans     &kp IS_LBKT  &kp N7     &kp N8     &kp N9     &kp IS_RBKT      &trans     &trans     &trans     &trans     &trans     &trans
+   &trans     &kp IS_EQUAL &kp N4     &kp N5     &kp N6     &kp SEMI         &trans     &trans     &trans     &trans     &trans     &trans
+   &trans     &kp IS_BSLH  &kp N1     &kp N2     &kp N3     &kp IS_GRAVE     &trans     &trans     &trans     &trans     &trans     &trans
+                                      &kp DOT    &kp N0     &kp MINUS        &trans     &trans     &trans
+                        >;
+                };
+
+                miryoku_sym {
+                        bindings = <
+   &trans     &kp IS_LBRC  &kp IS_AMPS &kp IS_MULTIPLY  &kp IS_LPAR     &kp IS_RBRC      &trans     &trans     &trans     &trans     &trans     &trans
+   &trans     &kp COLON    &kp DLLR    &kp PERCENT      &kp dl RA(SQT)  &kp IS_PLUS      &trans     &trans     &trans     &trans     &trans     &trans
+   &trans     &kp IS_TILDE &kp EXCL    &kp IS_A   T     &kp HASH        &kp IS_PIPE      &trans     &trans     &trans     &trans     &trans     &trans
+                                       &kp IS_LPAR    &kp IS_RPAR     &kp IS_UNDER     &trans     &trans     &trans
                         >;
                 };
 
