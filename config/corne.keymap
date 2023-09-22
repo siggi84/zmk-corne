@@ -129,7 +129,7 @@
             quick-tap-ms = <QUICK_TAP>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;    // <---[[right-hand keys]]
-            hold-trigger-on-release = <true>;
+            hold-trigger-on-release;
         };
 
         hmr: homerow_mods_right {
@@ -141,7 +141,7 @@
             quick-tap-ms = <QUICK_TAP>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;    // <---[[left-hand keys]]
-            hold-trigger-on-release = <true>;
+            hold-trigger-on-release;
         };
 
         hmls: homerow_mods_left_shift {
@@ -341,7 +341,7 @@
                 miryoku_sym {
                         bindings = <
    &none     &kp IS_LBRC  &kp IS_AMPS &kp IS_MULTIPLY  &kp IS_LPAR     &kp IS_RBRC      &none     &none     &none     &none     &none     &none
-   &none     &kp IS_COLON    &kp DLLR    &kp PERCENT      &dl RA(SQT)     &kp IS_PLUS      &none     &kp RSHFT  &kp LCTRL  &kp RALT   &kp LGUI   &none
+   &none     &kp IS_COLON    &kp DLLR &kp PERCENT      &dl RA(SQT)     &kp IS_PLUS      &none     &kp RSHFT  &kp LCTRL  &kp RALT   &kp LGUI   &none
    &none     &kp IS_TILDE &kp EXCL    &kp IS_AMPS      &kp HASH        &kp IS_PIPE      &none     &none     &none     &none     &none     &none
                                       &kp IS_LPAR      &kp IS_RPAR     &kp IS_UNDER     &none     &none     &none
                         >;
