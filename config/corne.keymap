@@ -72,6 +72,22 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        iscommagt: is_comma_lt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "IS_COMMA_LT";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp IS_LT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        isdotgt: is_dot_gt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "IS_DOT_GT";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp IS_GT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         acute_a: acute_a {
             compatible = "zmk,behavior-mod-morph";
             label = "ACUTE_A";
@@ -271,7 +287,7 @@
                         bindings = <
    &none  &kp Q       &kp W       &kp F        &kp P              &kp B            &kp J          &kp L         &kp U          &kp Y        &isqudq      &none
    &none  &hml LGUI A &hml LALT R &hml LCTRL S &hmls LSHFT T      &kp G            &kp M          &hmrs RSHFT N &hmr RCTRL E   &hmr LALT I  &hmr LGUI O &none
-   &trans &kp Z       &hml RALT X &kp C        &kp D              &kp V            &kp K          &kp H         &hmr RALT COMMA &kp DOT     &isslqu     &none
+   &trans &kp Z       &hml RALT X &kp C        &kp D              &kp V            &kp K          &kp H         &iscommagt     &isdotgt     &isslqu     &none
                                   &lmb MIR_MEDIA ESC      &lmb MIR_NAV SPACE &kp TAB          &lmb MIR_SYM RET &lmr MIR_NUM BSPC  &lmr FN DEL
                         >;
                 };
