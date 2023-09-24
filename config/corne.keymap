@@ -141,7 +141,7 @@
             label = "CAPS_TAB_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&caps_word>, <&kp CAPS>;
+            bindings = <&is_caps_word>, <&kp CAPS>;
         };
 
 
@@ -211,7 +211,10 @@
             bindings = <&mo>, <&kp>;
         };
 
-        &caps_word {
+        is_caps_word: behavior_is_caps_word {
+            compatible = "zmk,behavior-caps-word";
+            label = "IS_CAPS_WORD";
+            #binding-cells = <0>;
             continue-list = <IS_UNDER BKSP DELETE MINUS>;
         };
     };
