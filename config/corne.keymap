@@ -276,10 +276,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB       &kp Q       &kp W       &kp F        &kp P          &kp B            &kp J          &kp L        &kp U          &kp Y        &isqudq     &kp DEL
-   &trans        &hml LGUI A &hml LALT R &hml LCTRL S &hmls LSHFT T  &kp G            &kp M          &hmrs RSHFT N &hmr RCTRL E   &hmr LALT I  &hmr LGUI O &kp SQT
-   &tog MIRYOKU  &kp Z       &hml RALT X &kp C        &kp D          &kp V            &kp K          &kp H        &hmr RALT COMMA &kp DOT      &isslqu     &trans
-                                         &trans       &lt ICE ESC    &lmb LOWER SPACE &lmb RAISE RET &lmr FN BSPC &trans
+   &kp TAB       &kp Q       &kp W       &kp F         &kp P          &kp B            &kp J          &kp L         &kp U           &kp Y        &isqudq      &trans
+   &trans        &hml LGUI A &hml LALT R &hml LCTRL S  &hmls LSHFT T  &kp G            &kp M          &hmrs RSHFT N &hmr RCTRL E    &hmr LALT I  &hmr LGUI O &kp SQT
+   &tog MIRYOKU  &kp Z       &hml RALT X &kp C         &kp D          &kp V            &kp K          &kp H         &kp COMMA &hmr RALT DOT      &isslqu     &trans
+                                         &none         &lt ICE ESC    &lmb LOWER SPACE &lmb RAISE RET &lmr FN BSPC  &kp DEL
                         >;
                 };
 
@@ -295,17 +295,18 @@
                 lower_layer {
                         bindings = <
    &trans   &kp N1       &kp N2          &kp N3         &kp N4       &kp N5         &kp N6       &kp N7        &kp N8       &kp N9      &kp N0          &trans
-   &trans   &kp EXCL     &kp IS_AT       &kp HASH       &kp DLLR     &kp PRCNT      &kp IS_FSLH  &kp IS_UNDER  &kp IS_MINUS &kp IS_LPAR &kp IS_RPAR     &trans
-   &trans   &trans       &kp IS_MICR     &kp RA(GRAVE)  &kp IS_EURO  &trans         &kp IS_EQUAL &kp IS_PLUS   &trans       &trans      &kp IS_MULTIPLY &trans
+   &trans   &hml LGUI EXCL &hml LALT IS_AT  &hml LCTRL HASH   &hmls LSHFT DLLR     &kp PRCNT      &kp IS_FSLH  &hmrs RSHFT IS_UNDER  &hmr RCTRL IS_MINUS &hmr LALT IS_LPAR &hmr LGUI IS_RPAR     &trans
+   &trans   &trans       &hml RALT IS_MICR     &kp RA(GRAVE)  &kp IS_EURO  &trans         &kp IS_EQUAL &kp IS_PLUS   &trans       &trans      &kp IS_MULTIPLY &trans
                                          &kp ESC        &kp SPACE    &kp TAB        &kp ENTER    &kp BSPC      &lmr FN BSPC
                         >;
+
                 };
 
                 raise_layer {
                         bindings = <
-   &trans  &kp IS_LBRC  &kp IS_GT    &kp IS_RBKT     &kp IS_RPAR      &kp IS_PIPE       &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PLAY &trans
-   &trans  &kp IS_RBRC  &kp IS_LT    &kp IS_LBKT     &kp IS_LPAR      &kp IS_BSLH       &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT  &kp CAPS   &trans
-   &trans  &kp IS_GRAVE &kp IS_AMPS  &dl RA(SQT)     &kp RA(RBKT)     &trans            &kp HOME    &kp PG_DN    &kp PG_UP    &kp END    &kp INS    &trans
+   &trans  &kp IS_LBRC  &kp IS_GT    &kp IS_RBKT     &kp IS_RPAR      &kp IS_PIPE       &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PLAY_PAUSE &trans
+   &trans  &kp IS_RBRC  &kp IS_LT    &kp IS_LBKT     &kp IS_LPAR      &kp IS_BSLH       &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT  &kp CAPS         &trans
+   &trans  &kp IS_GRAVE &kp IS_AMPS  &dl RA(SQT)     &kp RA(RBKT)     &trans            &kp HOME    &kp PG_DN    &kp PG_UP    &kp END    &kp INS          &trans
                                      &trans          &trans           &trans            &trans      &trans       &trans
                         >;
                 };
