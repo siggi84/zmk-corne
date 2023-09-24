@@ -11,7 +11,7 @@
 
 #define TAPPING_TERM 200
 #define SHIFT_TAP    150
-#define QUICK_TAP    0
+#define QUICK_TAP    125
 
 #define DEFAULT 0
 #define MIRYOKU 1
