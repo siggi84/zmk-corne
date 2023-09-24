@@ -11,7 +11,7 @@
 
 #define TAPPING_TERM 200
 #define SHIFT_TAP    150
-#define QUICK_TAP    125
+#define QUICK_TAP    135
 
 #define DEFAULT 0
 #define MIRYOKU 1
@@ -211,6 +211,9 @@
             bindings = <&mo>, <&kp>;
         };
 
+        &caps_word {
+            continue-list = <IS_UNDER BKSP DELETE MINUS>;
+        };
     };
 
     macros {
