@@ -291,10 +291,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB       &kp Q       &kp W       &kp F         &kp P          &kp B            &kp J          &kp L         &kp U           &kp Y        &isqudq      &trans
-   &trans        &hml LGUI A &hml LALT R &hml LCTRL S  &hmls LSHFT T  &kp G            &kp M          &hmrs RSHFT N &hmr RCTRL E    &hmr LALT I  &hmr LGUI O &kp SQT
-   &tog MIRYOKU  &kp Z       &hml RALT X &kp C         &kp D          &kp V            &kp K          &kp H         &hmr RALT COMMA &kp DOT      &isslqu     &trans
-                                         &none         &lt ICE ESC    &lmb LOWER SPACE &lmb RAISE RET &lmr FN BSPC  &kp DEL
+   &kp TAB       &kp Q       &kp W       &kp F         &kp P          &kp B            &kp J          &kp L         &kp U         &kp Y         &isqudq      &trans
+   &trans        &hml LGUI A &hml LALT R &hml LCTRL S  &hmls LSHFT T  &kp G            &kp M          &hmrs RSHFT N &hmr RCTRL E  &hmr LALT I   &hmr LGUI O  &kp SQT
+   &tog MIRYOKU  &kp Z       &hml RALT X &kp C         &kp D          &kp V            &kp K          &kp H         &kp COMMA     &hmr RALT DOT &isslqu      &trans
+                                         &lt ADJUST TAB    &lt ICE ESC    &lmb LOWER SPACE &lmb RAISE RET &lmr FN BSPC  &kp DEL
                         >;
                 };
 
