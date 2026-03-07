@@ -156,7 +156,7 @@
 
         hmr: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_LEFT";
+            label = "HOMEROW_MODS_RIGHT";
             #binding-cells = <2>;
             flavor = "balanced";
             require-prior-idle-ms = <REQ_PRIOR>;
@@ -291,7 +291,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &kp Q       &kp W       &kp F         &kp P          &kp B            &kp J          &kp L         &kp U         &kp Y         &isqudq      
-   &hml LGUI A &hml LALT R &hml LCTRL S  &hmls LSHFT T  &kp G            &kp M          &hmrs RSHFT N &hmr RCTRL E  &hmr LALT I   &hmr LGUI O  
+   &hml LGUI A &hml LALT R &hml LCTRL S  &hml LSHFT T  &kp G            &kp M          &hmr RSHFT N &hmr RCTRL E  &hmr LALT I   &hmr LGUI O  
    &kp Z       &hml RALT X &kp C         &kp D          &kp V            &kp K          &kp H         &kp COMMA     &hmr RALT DOT &isslqu      
                                          &lt ICE ESC    &lmb LOWER SPACE &lmb RAISE RET &lmr FN BSPC
                         >;
