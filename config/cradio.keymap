@@ -9,9 +9,12 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define TAPPING_TERM 220 # Was 280 in ZMK documentation for timeless HRM
-#define QUICK_TAP    175
-#define REQ_PRIOR    125 # Was 150 in ZMK documentation for timeless HRM
+// Was 280 in ZMK documentation for timeless HRM
+#define TAPPING_TERM 220 
+#define QUICK_TAP    175 
+
+// Was 150 in ZMK documentation for timeless HRM
+#define REQ_PRIOR    125
 
 #define DEFAULT 0
 #define LOWER   1
