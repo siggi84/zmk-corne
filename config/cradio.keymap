@@ -9,10 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define TAPPING_TERM 280
-#define SHIFT_TAP    280
+#define TAPPING_TERM 220 # Was 280 in ZMK documentation for timeless HRM
 #define QUICK_TAP    175
-#define REQ_PRIOR    150
+#define REQ_PRIOR    125 # Was 150 in ZMK documentation for timeless HRM
 
 #define DEFAULT 0
 #define LOWER   1
@@ -147,7 +146,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             require-prior-idle-ms = <REQ_PRIOR>;
-            tapping-term-ms = <TAPPING_TERM>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            tapping-term-ms = <TAPPING_TERM>;
             quick-tap-ms = <QUICK_TAP>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 32 33>;    // <---[[right-hand keys, 3x5+2 layout]]
@@ -286,8 +285,8 @@
 
                 raise_layer {
                         bindings = <
-   &kp IS_LBRC  &kp IS_GT    &kp IS_RBKT     &kp IS_RPAR      &kp IS_PIPE       &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PLAY_PAUSE
-   &kp IS_RBRC  &kp IS_LT    &kp IS_LBKT     &kp IS_LPAR      &kp IS_BSLH       &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT  &caps_td         
+   &kp IS_RBRC  &kp IS_GT    &kp IS_RBKT     &kp IS_RPAR      &kp IS_PIPE       &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PLAY_PAUSE
+   &kp IS_LBRC  &kp IS_LT    &kp IS_LBKT     &kp IS_LPAR      &kp IS_BSLH       &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT  &caps_td         
    &kp IS_GRAVE &kp IS_AMPS  &dl RA(SQT)     &kp RA(RBKT)     &trans            &kp HOME    &kp PG_DN    &kp PG_UP    &kp END    &kp INS          
                              &trans          &trans           &trans            &trans
                 >;
