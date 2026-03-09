@@ -1,3 +1,4 @@
+//
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
@@ -10,11 +11,11 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // Was 280 in ZMK documentation for timeless HRM
-#define TAPPING_TERM 220 
+#define TAPPING_TERM 280 
 #define QUICK_TAP    175 
 
 // Was 150 in ZMK documentation for timeless HRM
-#define REQ_PRIOR    125
+#define REQ_PRIOR    150
 
 #define DEFAULT 0
 #define LOWER   1
@@ -298,9 +299,9 @@
         adjust_layer {
                 bindings = <
       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4 &trans     &bt BT_CLR &bt BT_NXT &bt BT_PRV &trans
-      &kp A         &kp R         &kp S         &kp T         &trans       &trans     &kp N      &kp E      &kp I      &kp O 
-      &trans        &kp X         &trans        &trans        &trans       &trans     &trans     &trans     &kp COMMA  &trans
-                                  &trans        &trans       &trans     &trans
+      &sys_reset        &trans        &trans        &trans       &trans     &trans     &trans      &trans       &trans   &sys_reset 
+      &bootloader        &trans        &trans        &trans       &trans     &trans     &trans     &trans       &trans  &bootloader
+                                                &trans       &trans     &trans     &trans
                 >;
         };
 
@@ -321,7 +322,6 @@
                                        &trans     &trans        &trans     &kp DEL
                 >;
         };
-
 
 /* // TODO: Program BT_SEL to clear profile when holding shift. */
 /*                 miryoku_media { */
